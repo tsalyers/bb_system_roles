@@ -18,3 +18,4 @@ optional arguments:
 ### Caveats
 - You'll need to make sure the user you're using for REST has permissions to view and update users' system roles. 
 - The script doesn't currently check whether a user already has a secondary system role, and will add it again even if it's already attached to the user. (This doesn't really affect anything; it's just untidy.)
+- It needs some better error handling around the GET/PATCH requests to the user endpoint. It's not currently catching any exceptions that might happen there.
