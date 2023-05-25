@@ -9,7 +9,7 @@ import argparse
 # Make the file and userId arguments mutually exclusive--it doesn't make sense to have both.
 ap = argparse.ArgumentParser()
 arg_group = ap.add_mutually_exclusive_group()
-arg_group.add_argument("-f", "--file", help="Filename containing a list of user IDs to assign roles")
+arg_group.add_argument("-f", "--file", help="Filename containing a list of user IDs to assign roles (one ID per line)")
 arg_group.add_argument("-u", "--user", help="User ID to assign a role")
 ap.add_argument("-r", "--role", required=True,
    help="New secondary system role ID")
