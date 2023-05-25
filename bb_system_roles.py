@@ -68,9 +68,6 @@ def get_auth_token():
         # also terrible. Let's just catch everything. 
         raise Exception(str(e))
 
-# Get user data here.
-PLACEHOLDER_USER = 'cs1tds'
-
 
 # Get an auth token for the REST API and put it into our request headers...
 auth_headers = get_auth_headers()
