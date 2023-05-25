@@ -15,3 +15,6 @@ optional arguments:
   -u USER, --user USER  User ID to assign a role
   -r ROLE, --role ROLE  New secondary system role ID
   ```
+### Caveats
+- You'll need to make sure the user you're using for REST has permissions to view and update users' system roles. 
+- The script doesn't currently check whether a user already has a secondary system role, and will add it again even if it's already attached to the user. (This doesn't really affect anything; it's just untidy.)
