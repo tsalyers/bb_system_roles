@@ -57,8 +57,7 @@ def get_auth_token():
         authorization = 'Basic ' + encoded_credentials
         resp = requests.post(REST_HOSTNAME + OAUTH_URL, headers={'Authorization':authorization}, data={'grant_type':'client_credentials'})
             
-        #Finally, grab the access token from the returned JSON and cache it, 
-        # then return the new token. 
+        #Finally, grab the access token from the response JSON and return it.         
         auth_token = json.loads(resp.text)['access_token']
         return auth_token
     except Exception as e:
